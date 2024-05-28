@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life/Activity Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Life/Activity Tracker</h1>
+            <div id="calendar-controls">
+                <button id="prev-month">Prev</button>
+                <span id="current-month"></span>
+                <button id="next-month">Next</button>
+            </div>
+        </header>
+        <div id="calendar"></div>
+        <div id="activity-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Add Activity</h2>
+                <label for="activity">Activity:</label>
+                <input type="text" id="activity" placeholder="Enter your activity">
+                <label for="category">Category:</label>
+                <select id="category"></select>
+                <label for="start-time">Start Time:</label>
+                <input type="time" id="start-time">
+                <label for="end-time">End Time:</label>
+                <input type="time" id="end-time">
+                <label for="recurrence">Recurrence:</label>
+                <select id="recurrence">
+                    <option value="none">None</option>
+                    <option value="daily">Daily</option>
+                    <option value="weekly">Weekly</option>
+                    <option value="monthly">Monthly</option>
+                </select>
+                <button onclick="addActivity()">Add Activity</button>
+            </div>
+        </div>
+        <div id="extra-tracking">
+            <h2>Additional Tracking</h2>
+            <label for="mood">Mood:</label>
+            <input type="text" id="mood" placeholder="How are you feeling?">
+            <label for="water-intake">Water Intake (oz):</label>
+            <input type="number" id="water-intake" placeholder="Enter water intake">
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
